@@ -1,0 +1,8 @@
+ACTION=="add" \
+  , SUBSYSTEM=="usb" \
+  , ENV{ID_MODEL}=="Logitech_BRIO" \
+  RUN+="/home/tuhlmann/entw/aktuell/select-howdy-source/video_source_changed.sh"
+
+ACTION=="remove"\
+  , ENV{ID_MODEL}=="Logitech_BRIO" \
+  RUN+="/home/tuhlmann/entw/aktuell/select-howdy-source/video_source_changed.sh"
